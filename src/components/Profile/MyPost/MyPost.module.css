@@ -1,0 +1,9 @@
+.body {
+   margin: 2em;
+}
+
+.ava img {
+   width: 10em;
+   height: 10em;
+   border-radius: 50%;
+}

@@ -1,0 +1,32 @@
+.dialogsItems {
+   display: grid;
+   grid-template-columns: 3fr 7fr;
+   
+}
+
+.dialogsItem {
+   border-right: solid 1px gray;
+   padding: 2em;
+}
+.link {
+   margin-bottom: 3em;
+   font-weight: 600;
+   font-size: 1.1em;
+}
+.link a{
+  text-decoration: none;
+ 
+}
+
+.massages {
+   padding-left: 1.5em;
+   padding: 2em;
+}
+
+.massage {
+   border: solid 1px ;
+   margin-bottom: 2em;
+   padding: 1em;
+   border-radius: 1em 1em 1em 0;
+   box-shadow: 10px 5px 5px rgba(128, 128, 128, 0.322);
+}
