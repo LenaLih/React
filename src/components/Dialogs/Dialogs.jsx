@@ -4,7 +4,6 @@ import DialogName from './DialogName/DialogName';
 import Message from './Message/Message';
 
 
-
 const Dialogs = (props) => {
 
 
