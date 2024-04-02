@@ -2,7 +2,13 @@ import React from 'react';
 import Post from './Post/Post';
 import s from './Posts.module.css';
 
-const Posts = () => {
+const Posts = (props) => {
+   // let postsData = [
+   //    {id: 1, message: 'Hi', likesCount: 5},
+   //    {id: 2, message: 'Yo', likesCount: 15},
+   //    {id: 3, message: 'Yo', likesCount: 25}
+   // ]
+   let postsElement = props.postsData.map ((p) => <Post message = {p.message} count = {p.likesCount} />)
    return (
 
       <div className={s.list}>
@@ -17,8 +23,7 @@ const Posts = () => {
             <button>Add post</button>
          </div>
          <div className={s.post}>
-            <Post count='5' message='Hi' />
-            <Post count='50' />
+        {postsElement}
          </div>
 
       </div>

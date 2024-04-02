@@ -5,6 +5,8 @@
    margin: 2em 0;
 }
 textarea {
+ 
+   padding: 0.8em 1.5em;
    width: 100%;
    min-height: 5em;
    border-radius: 3em 2em 2em 0;
