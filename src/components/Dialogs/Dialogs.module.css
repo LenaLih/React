@@ -1,3 +1,4 @@
+
 .dialogsItems {
    display: grid;
    grid-template-columns: 3fr 7fr;
@@ -8,8 +9,11 @@
    border-right: solid 1px gray;
    padding: 2em;
 }
+.body {
+   display: flex;
+   align-items: center;
+}
 .link {
-   margin-bottom: 3em;
    font-weight: 600;
    font-size: 1.1em;
 }
@@ -29,4 +33,7 @@
    padding: 1em;
    border-radius: 1em 1em 1em 0;
    box-shadow: 10px 5px 5px rgba(128, 128, 128, 0.322);
+}
+.ava img {
+   width: 80px;
 }
