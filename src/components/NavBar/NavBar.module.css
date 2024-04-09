@@ -3,24 +3,29 @@
    background-color: rgb(196, 223, 223);
    padding: 20px;
 }
+
 .list {
    font-size: 1.4em;
    font-weight: 600;
    color: rgb(61, 59, 59);
    list-style-type: none;
 }
+
 .item {
    margin-bottom: 3em;
-   
-   
+
+
 }
+
 .item :hover {
    color: rgb(13, 13, 236);
-   /* transform: translateX(50px);  */
+
 }
+
 .item a {
    text-decoration: none;
 }
+
 .item a:active,
 .item a:focus {
    color: red;

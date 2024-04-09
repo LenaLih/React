@@ -1,0 +1,28 @@
+.nav {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.title {}
+
+.friend {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
+.title :hover {
+   color: rgb(13, 13, 236);
+
+}
+
+.title a {
+   text-decoration: none;
+}
+
+.title a:active,
+.title a:focus {
+   color: red;
+}

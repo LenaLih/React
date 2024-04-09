@@ -57,11 +57,42 @@ let state = {
             id: 3,
             message: 'Yo'
          },
+      ],
+
+
+   },
+ 
+   sidebar: {
+     friendsData: [{
+      id: 1,
+      name: 'Alisa'
+   },
+   {
+      id: 2,
+      name: 'Lena'
+   },
+   {
+      id: 3,
+      name: 'Anastasia'
+   },
+   {
+      id: 4,
+      name: 'Marta'
+   },
+   {
+      id: 5,
+      name: 'Jroslav'
+   },
+  ]
+
+   },
+   
+   newsPage: {
+      newsData: [
+         {},{}
       ]
    },
-   newsPage: {},
    musicPage: {},
    settingPage: {}
 }
-
 export default state;

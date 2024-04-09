@@ -5,6 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state  from './Redux/state'
 
+
+// let friendsData = [
+//   {id: 1, name: 'Lena'},
+//   {id: 2, name: 'LenaL'}
+//  ]
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

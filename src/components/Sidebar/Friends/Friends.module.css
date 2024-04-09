@@ -1,0 +1,21 @@
+.ava img {
+   max-width: 70px;
+   border-radius: 30%;
+}
+
+.users {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex-grow: 1;
+}
+
+.user a {
+   text-decoration: none;
+   color: rgb(64, 44, 97);
+   ;
+   font-size: 19px;
+   font-weight: 500;
+   
+}
