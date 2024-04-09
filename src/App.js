@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import './App.css';
 import Dialogs from './components/Dialogs/Dialogs';
 import Header from './components/Header/Header';
@@ -16,7 +16,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 const App = (props) => { 
 
   return ( 
-    <BrowserRouter >
+    
     <div className = 'app-wrapper'>
     <Header  />
     <NavBar state = {props.state}/>
@@ -25,12 +25,12 @@ const App = (props) => {
     <div className = 'app-wrapper-content' >
       
     <Routes>
-      <Route path='/Profile' element={<Profile postsData ={props.state.profilePage.postsData}/>}/>
-      <Route path='/Dialog*'element={<Dialogs dialogsData = {props.state.messagePage.dialogsData} messagesData = {props.state.messagePage.messagesData}/>}/>
+      <Route path='/Profile' element={<Profile state ={props.state.profilePage}/>}/>
+      <Route path='/Dialog*'element={<Dialogs state = {props.state.messagePage} />}/>
       <Route path='/News'element={<News />}/>
       <Route path='/Music'element={<Music />}/>
       <Route path='/Setting'element={<Setting />}/>
-      <Route path='/Sidebar'element={<Sidebar  friendsData ={props.state.sidebar.friendsData}/>}/>
+      <Route path='/Sidebar'element={<Sidebar  state ={props.state.sidebar}/>}/>
     
     </Routes>
           
@@ -39,7 +39,7 @@ const App = (props) => {
     </div>
 
     </div> 
-    </BrowserRouter>
+    // </BrowserRouter>
 
   );
 }

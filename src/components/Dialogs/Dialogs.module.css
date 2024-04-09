@@ -37,3 +37,10 @@
 .ava img {
    width: 80px;
 }
+.button {
+   display: flex;
+   justify-content: right;
+}
+button {
+  
+}

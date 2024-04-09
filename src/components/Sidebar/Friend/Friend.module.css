@@ -13,9 +13,11 @@
 
 .user a {
    text-decoration: none;
-   color: rgb(64, 44, 97);
-   ;
+   color: rgb(49, 37, 119);
    font-size: 19px;
    font-weight: 500;
    
+}
+.user :hover {
+   color: rgb(37, 4, 223);
 }
