@@ -57,6 +57,10 @@ let state = {
             id: 3,
             message: 'Yo'
          },
+         {
+            id: 4,
+            message: 'Yo'
+         },
       ],
 
 
@@ -94,5 +98,25 @@ let state = {
    },
    musicPage: {},
    settingPage: {}
-}
+};
+export let addPost = (postMessage) => {
+   let newPost = {
+      id: 6,
+      message: postMessage,
+      likesCount: 5
+   };
+   state.profilePage.postsData.push(newPost);
+}; 
+
+export let addNewMessage = (newMessage) => {
+
+   let message = {
+      id: 6,
+      message: newMessage,
+      
+   };
+   state.messagePage.messagesData.push(message);
+};
+
+
 export default state;

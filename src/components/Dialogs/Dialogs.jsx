@@ -2,14 +2,19 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogName from './DialogName/DialogName';
 import Message from './Message/Message';
+import { useState } from 'react';
 
 
 const Dialogs = (props) => {
-  let newMessageElement = React.createRef();
-  let addMessage = () => {
-    let message = newMessageElement.current.value;
-    alert(message);
-  }
+
+  let [newMessageText, setNewMessageText] = useState('')
+   let addMessage = () => {
+    if (newMessageText.trim() !== '') {
+      props.addNewMessage(newMessageText);
+      setNewMessageText('')
+    };
+
+   };
 
   let dialogsElement = props.state.dialogsData.map((d) => <DialogName name={d.name} id={d.id} />);
 
@@ -24,7 +29,7 @@ const Dialogs = (props) => {
       <div className={s.messages}>
         {messagesElement}
         
-        <textarea ref={ newMessageElement }></textarea>
+        <textarea value={newMessageText} onChange={(e) => setNewMessageText(e.target.value)} />
         <div className= {s.button}>
         <button onClick={ addMessage }>Add post</button>
         </div>

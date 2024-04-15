@@ -1,13 +1,20 @@
 import React from 'react';
+import { useState } from 'react';
 import Post from './Post/Post';
 import s from './Posts.module.css';
 
 const Posts = (props) => {
-   let newPostElement = React.createRef();
-   let addPost = ()=> {
-      let text = newPostElement.current.value;
-      alert(text);
-   } 
+
+   const [newPostText, setNewPostText] = useState('');
+
+   const addPosts = () => {
+      if (newPostText.trim() !== '') {
+         props.addPost(newPostText);
+         setNewPostText('');
+      };
+   };
+
+
    let postsElement = props.postsData.map ((p) => <Post message = {p.message} count = {p.likesCount} />)
    return (
 
@@ -17,10 +24,12 @@ const Posts = (props) => {
             <h3>New posts</h3>
          </div>
          <div>
-            <textarea ref={newPostElement}></textarea>
+            {/* <textarea ref={newPostElement} ></textarea> */}
+            <textarea value={newPostText} onChange={(p) => setNewPostText(p.target.value)} />
+
          </div>
          <div className={s.button}>
-            <button onClick={ addPost }>Add post</button>
+            <button onClick={ addPosts }>Add post</button>
          </div>
          <div className={s.post}>
         {postsElement}

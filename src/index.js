@@ -3,18 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state  from './Redux/state'
+import state, { addNewMessage }  from './Redux/state'
 import { BrowserRouter} from 'react-router-dom';
+import { addPost } from './Redux/state';
 
-// let friendsData = [
-//   {id: 1, name: 'Lena'},
-//   {id: 2, name: 'LenaL'}
-//  ]
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <BrowserRouter >
   <React.StrictMode>
-    <App state ={state} />
+    <App state ={state} addPost ={addPost} addNewMessage ={addNewMessage} />
   </React.StrictMode>
   </BrowserRouter>
 
