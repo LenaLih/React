@@ -9,7 +9,8 @@ const Posts = (props) => {
 
    const addPosts = () => {
       if (newPostText.trim() !== '') {
-         props.addPost(newPostText);
+         // props.addPosts(newPostText);
+         props.dispatch({ type:'ADD-POST', newPost: newPostText});
          setNewPostText('');
       };
    };
@@ -24,8 +25,8 @@ const Posts = (props) => {
             <h3>New posts</h3>
          </div>
          <div>
-            {/* <textarea ref={newPostElement} ></textarea> */}
-            <textarea value={newPostText} onChange={(p) => setNewPostText(p.target.value)} />
+          
+            <textarea placeholder='Message' value={newPostText} onChange={(p) => setNewPostText(p.target.value)} />
 
          </div>
          <div className={s.button}>

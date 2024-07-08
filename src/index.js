@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state, { addNewMessage }  from './Redux/state'
+import store  from './Redux/state'
 import { BrowserRouter} from 'react-router-dom';
-import { addPost } from './Redux/state';
+// import { addPost } from './Redux/state';
 
 
 
@@ -14,7 +14,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter >
   <React.StrictMode>
-    <App state ={state} addPost ={addPost} addNewMessage ={addNewMessage} />
+    {/* <App state ={store.getState()} addPost ={store.addPost.bind(store)} addNewMessage ={store.addNewMessage.bind(store)} /> */}
+    <App state ={store.getState()} dispatch ={store.dispatch.bind(store)} addNewMessage ={store.addNewMessage.bind(store)} />
   </React.StrictMode>
   </BrowserRouter>
 

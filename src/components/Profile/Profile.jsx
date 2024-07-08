@@ -10,8 +10,8 @@ const Profile = (props) => {
       <div className={s.body}>
          <ProfileInfo />
       <MyPost />
-      <Posts postsData = {props.state.postsData} addPost = {props.addPost}/>
-
+      {/* <Posts postsData = {props.state.postsData} addPost = {props.addPost}/> */}
+      <Posts postsData = {props.state.postsData} dispatch = {props.dispatch}/>
       </div>
    )
 }
