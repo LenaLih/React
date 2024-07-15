@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import Post from './Post/Post';
 import s from './Posts.module.css';
+import { addPostActionGreator } from '../../../Redux/state';
+
 
 const Posts = (props) => {
 
@@ -9,14 +11,13 @@ const Posts = (props) => {
 
    const addPosts = () => {
       if (newPostText.trim() !== '') {
-         // props.addPosts(newPostText);
-         props.dispatch({ type:'ADD-POST', newPost: newPostText});
+         props.dispatch(addPostActionGreator(newPostText));
          setNewPostText('');
       };
    };
 
 
-   let postsElement = props.postsData.map ((p) => <Post message = {p.message} count = {p.likesCount} />)
+   let postsElement = props.postsData.map ((p) => <Post key={p.id} message = {p.message} count = {p.likesCount} />)
    return (
 
       <div className={s.list}>

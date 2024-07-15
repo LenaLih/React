@@ -14,8 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter >
   <React.StrictMode>
-    {/* <App state ={store.getState()} addPost ={store.addPost.bind(store)} addNewMessage ={store.addNewMessage.bind(store)} /> */}
-    <App state ={store.getState()} dispatch ={store.dispatch.bind(store)} addNewMessage ={store.addNewMessage.bind(store)} />
+    <App state ={store.getState()} dispatch ={store.dispatch.bind(store)} />
   </React.StrictMode>
   </BrowserRouter>
 

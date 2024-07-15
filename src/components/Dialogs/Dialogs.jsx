@@ -3,18 +3,21 @@ import s from './Dialogs.module.css';
 import DialogName from './DialogName/DialogName';
 import Message from './Message/Message';
 import { useState } from 'react';
+import { addNewMessageActionCreator } from '../../Redux/state';
 
 
 const Dialogs = (props) => {
 
   let [newMessageText, setNewMessageText] = useState('')
    let addMessage = () => {
+  
     if (newMessageText.trim() !== '') {
-      props.addNewMessage(newMessageText);
+      props.dispatch(addNewMessageActionCreator(newMessageText));
       setNewMessageText('')
     };
+    
 
-   };
+  };
 
   let dialogsElement = props.state.dialogsData.map((d) => <DialogName name={d.name} id={d.id} />);
 
@@ -33,11 +36,10 @@ const Dialogs = (props) => {
         <div className= {s.button}>
         <button onClick={ addMessage }>Add post</button>
         </div>
-
+         ghhjkk
       </div>
-    </div>
-
-  );
+    </div> 
+);
 }
 
 

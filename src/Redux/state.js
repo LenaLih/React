@@ -1,5 +1,8 @@
+
+
+
 let store = {
-    _state:  {
+   _state:  {
       profilePage: {
          postsData: [{
                id: 1,
@@ -103,46 +106,41 @@ let store = {
    getState ()  {
       return this._state;
    },
-   //  addPost (postMessage)  {
-   //    let newPost = {
-   //       id: 6,
-   //       message: postMessage,
-   //       likesCount: 5
-   //    };
-   //    this._state.profilePage.postsData.push(newPost);
-   // }, 
-   
-    addNewMessage (newMessage)  {
-   
-      let message = {
-         id: +1,
-         message: newMessage,
-         
-      };
-     this._state.messagePage.messagesData.push(message);
-   },
    dispatch(action) {
       if (action.type === 'ADD-POST') {
          let newPost = {
-            id: 6,
-            message: postMessage,
-            likesCount: 5
+            id: this._state.profilePage.postsData.length + 1,
+            message: action.newPost,
+            likesCount: 0
          };
          this._state.profilePage.postsData.push(newPost);
-         this._state.profilePage.postsData = action.newPost;
-      };
-      // } else if (action.type === 'ADD-NEW-MESSAGE') {
-      //    let message = {
-      //       id: 6,
-      //       message: newMessage,
-            
-      //    };
-      //   this._state.messagePage.messagesData.push(message);
-      //   this._state.messagePage.messagesData.message = action.newMessage;
-      // }
-   // }
-   
-},
-};
+         // this._state.profilePage.postsData = action.newPost;
+      }
+         else if (action.type === 'ADD-NEW-MESSAGE') {
+         let newMessage = {
+            id: this._state.messagePage.messagesData.length + 1,
+            message: action.newMessage
+         };
+         
+      //    this._state.messagePage.messagesData.message = action.newMessage;
+         this._state.messagePage.messagesData.push(newMessage);
+      }
+   },
+
+}
+
+export const addPostActionGreator = (newPostText) => {
+   return {
+      type:'ADD-POST',
+      newPost: newPostText
+   }
+}
+export const addNewMessageActionCreator = (newMessageText) => {
+   return { 
+      type:'ADD-NEW-MESSAGE', 
+   newMessage: newMessageText
+}
+}
+
 export default store;
-window.store = store;
+window.store = store; 
