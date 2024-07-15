@@ -36,7 +36,7 @@ const Dialogs = (props) => {
         <div className= {s.button}>
         <button onClick={ addMessage }>Add post</button>
         </div>
-         ghhjkk
+         ghhjkkbnmnкттьолл
       </div>
     </div> 
 );
