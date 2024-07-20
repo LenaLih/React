@@ -114,7 +114,7 @@ let store = {
             likesCount: 0
          };
          this._state.profilePage.postsData.push(newPost);
-         // this._state.profilePage.postsData = action.newPost;
+         this._state.profilePage.postsData.message = action.newPost;
       }
          else if (action.type === 'ADD-NEW-MESSAGE') {
          let newMessage = {
@@ -122,7 +122,7 @@ let store = {
             message: action.newMessage
          };
          
-      //    this._state.messagePage.messagesData.message = action.newMessage;
+         this._state.messagePage.messagesData.message = action.newMessage;
          this._state.messagePage.messagesData.push(newMessage);
       }
    },
