@@ -1,3 +1,5 @@
+import messagePeageReduser from "./messagePage-reducer";
+import profilePageReducer from "./profilePage-reducer";
 
 
 
@@ -107,40 +109,12 @@ let store = {
       return this._state;
    },
    dispatch(action) {
-      if (action.type === 'ADD-POST') {
-         let newPost = {
-            id: this._state.profilePage.postsData.length + 1,
-            message: action.newPost,
-            likesCount: 0
-         };
-         this._state.profilePage.postsData.push(newPost);
-         this._state.profilePage.postsData.message = action.newPost;
-      }
-         else if (action.type === 'ADD-NEW-MESSAGE') {
-         let newMessage = {
-            id: this._state.messagePage.messagesData.length + 1,
-            message: action.newMessage
-         };
-         
-         this._state.messagePage.messagesData.message = action.newMessage;
-         this._state.messagePage.messagesData.push(newMessage);
-      }
+      this._state.profilePage= profilePageReducer(this._state.profilePage, action);
+      this._state.messagePage = messagePeageReduser(this._state.messagePage, action);
    },
 
 }
 
-export const addPostActionGreator = (newPostText) => {
-   return {
-      type:'ADD-POST',
-      newPost: newPostText
-   }
-}
-export const addNewMessageActionCreator = (newMessageText) => {
-   return { 
-      type:'ADD-NEW-MESSAGE', 
-   newMessage: newMessageText
-}
-}
 
 export default store;
 window.store = store; 

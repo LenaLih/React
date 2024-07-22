@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Post from './Post/Post';
 import s from './Posts.module.css';
-import { addPostActionGreator } from '../../../Redux/state';
+import { addPostActionGreator } from '../../../Redux/profilePage-reducer';
 
 
 const Posts = (props) => {
