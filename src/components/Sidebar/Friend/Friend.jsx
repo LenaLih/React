@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Friend.module.css';
 import { NavLink } from 'react-router-dom';
+import Friends from '../Friends/Friends';
 
 
 
@@ -16,8 +17,7 @@ const Friend = (props) => {
          <div className={s.user}>
             <NavLink to={path}>{props.name}</NavLink>
          </div>
-
-
+   
       </div>
 
 

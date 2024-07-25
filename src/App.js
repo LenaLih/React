@@ -8,6 +8,7 @@ import NavBar from './components/NavBar/NavBar';
 import News from './components/News/News';
 import Profile from './components/Profile/Profile';
 import Setting from './components/Setting/Setting';
+import Friends from './components/Sidebar/Friends/Friends';
 import Sidebar from './components/Sidebar/Sidebar';
 
 
@@ -30,8 +31,8 @@ const App = (props) => {
       <Route path='/News'element={<News />}/>
       <Route path='/Music'element={<Music />}/>
       <Route path='/Setting'element={<Setting />}/>
-      <Route path='/Sidebar'element={<Sidebar  state ={props.state.sidebar}/>}/>
-    
+      {/* <Route path='/Sidebar'element={<Sidebar  state ={props.state.sidebar}/>}/> */}
+      <Route path='/Friends'element={<Friends />}/>
     </Routes>
           
     
