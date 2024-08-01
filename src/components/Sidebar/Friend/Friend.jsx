@@ -6,7 +6,7 @@ import Friends from '../Friends/Friends';
 
 
 const Friend = (props) => {
-   let path = '/Friend/' + props.id;
+   let path = '/Friends/' + props.id;
 
 
    return (

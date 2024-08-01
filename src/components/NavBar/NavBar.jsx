@@ -2,11 +2,12 @@ import React from 'react';
 import s from './NavBar.module.css';
 import {NavLink}  from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
+import { useSelector } from 'react-redux';
 
 
 
 const NavBar = (props) => {
-
+   const friendsData = useSelector(state => state.sidebar?.friendsData);
    return (
   
 <nav className={s.nav}>
@@ -18,10 +19,10 @@ const NavBar = (props) => {
    <li className= {s.item}><NavLink to='/Setting'>Setting</NavLink></li>
    {/* <li className={s.title}><NavLink to='/friends'>Friends</NavLink></li> */}
    </ul>
-   <Sidebar friendsData = {props.state.sidebar.friendsData}/>
+   {/* <Sidebar friendsData = {props.state.sidebar.friendsData}/> */}
    <div>
    
-  {/* <Sidebar friendsData = {props.state.sidebar.friendsData}/> */}
+  <Sidebar friendsData = {friendsData}/>
    </div>
    
 </nav>

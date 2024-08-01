@@ -1,15 +1,13 @@
-import React from 'react';
+
 import { NavLink } from 'react-router-dom';
-import Friend from './Friend/Friend';
-import Friends from './Friends/Friends';
 import s from './Sidebar.module.css';
 
 
 
 
 const Sidebar = (props) => {
+  
 
-   let friendElement = props.friendsData.map((f) => <Friend name={f.name} id={f.id} />);
 
    return (
 
@@ -18,7 +16,7 @@ const Sidebar = (props) => {
 
          <div className={s.friend}>
 
-            {friendElement}
+            
          </div>
 
       </div>
